@@ -120,9 +120,9 @@ Batch size refers to the number of training examples utilized in one iteration. 
 # For this training, we will use 50 layers
 num_layers = "50" 
 # we need to specify the input image shape for the training data
-image_shape = "3,200,200"
+image_shape = "3,224,224"
 # we also need to specify the number of training samples in the training set
-num_training_samples = "97920"
+num_training_samples = "46080"
 # specify the number of output classes
 num_classes = "24"
 # batch size for training
@@ -134,7 +134,7 @@ learning_rate = "0.1"
 #optimizer
 optimizer ='Adam'
 #checkpoint_frequency
-checkpoint_frequency = "10"
+checkpoint_frequency = "4"
 #scheduler_step
 lr_scheduler_step="2,4"
 #scheduler_factor
