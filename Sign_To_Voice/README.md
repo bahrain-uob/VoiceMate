@@ -106,13 +106,13 @@ training_image = containers[boto3.Session().region_name]
 ~~~
 Next let’s define the network that we will use to train the dataset. For this tutorial, we will use ResNet network. ResNet is the default image classification model in Amazon SageMaker. In this step, you can customize the hyper parameters of the network to train your dataset.
 
-num_layers lets you define the network depth. ResNet supports multiple network depths. For example: 18, 34, 50, 101, 152, 200 etc. For this example we choose the network depth as 50.
+num_layers lets you define the network depth. ResNet supports multiple network depths. For example: 18, 34, 50, 101, 152, 200 etc. For this example we choose the default network depth as 50.
 
 Next we need to specify the input image dimensions. The dataset that we used in this example has the dimensions 224 x 224 and has 3 color channels: RGB.
 
-Next we specify the number of training samples in the training set. For this dataset, the number of training samples are 97920.
+Next we specify the number of training samples in the training set. For this dataset, the number of samples in the training dataset after 80-20 split is 46080 images.
 
-Next, we specify the number of output classes for the model. In this example, the number of output classes is 24.
+Next, we specify the number of output classes for the model. In this example, the number of output classes is 24 (24 Letters).
 
 Batch size refers to the number of training examples utilized in one iteration. You can customize this number based on the computation resources available to you. Epoch is when the entire dataset is processed by the network once. Learning rate determines how fast the weights or coefficients of your network change. You can customize batch size, epochs and learning rates. You can refer to the definitions here: https://docs.aws.amazon.com/sagemaker/latest/dg/IC-Hyperparameter.html.
 ~~~
@@ -174,7 +174,7 @@ training_params = \
     },
     "ResourceConfig": {
         "InstanceCount": 1,
-        "InstanceType": "ml.p2.8xlarge",
+        "InstanceType": "ml.p2.xlarge",
         "VolumeSizeInGB": 50
     },
     "TrainingJobName": job_name,
@@ -228,7 +228,7 @@ training_params = \
 print('Training job name: {}'.format(job_name))
 print('\nInput Data Location: {}'.format(training_params['InputDataConfig'][0]['DataSource']['S3DataSource']))
 ~~~
-In the next step, you can check the status of the Job in CloudWatch.
+The next step creates the training job and allows you to check the status of the Job in CloudWatch.
 ~~~
 # create the Amazon SageMaker training job
 sagemaker = boto3.client(service_name='sagemaker')
