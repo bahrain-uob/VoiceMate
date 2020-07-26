@@ -319,17 +319,10 @@ sudo apt-get update
 sudo apt-get install tesseract-ocr
 sudo apt-get install python-gi
 sudo pip install playsound
-```
-Now download any .mp3 file and play it.
-A prompt will open up asking you to install some required packages which are needed to play back audio on the device.
-![GitHub Logo](./images/setDeeplens1.png)
-![GitHub Logo](./images/setDeeplens2.png)
-You will need to enter an administrator password to proceed.
-Now run the following code in the terminal and connect any audio device to hear the sound
-sudo systemctl restart greengrassd.service --no-block
-Perfect, you can now test your model on the deeplens.
-To view your project stream follow the step-by-step guidelines [here](https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-output.html).
+sudo apt-get install gstreamer1.0-plugins-bad
+sudo apt-get install gstreamer1.0-plugins-ugly
 
+```
 ### Trying it out!
 
 ![A](./Signs/A.jpg)
