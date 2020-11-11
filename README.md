@@ -132,11 +132,11 @@ You can test it out by reading the following paragraph.
 
 The scene will take the audio input and then convert into the sign language.
 
-![Image description](./Images/demo.png)
+
 
 You can also make changes to the scene according to your own needs.Once you are done modifying the scene then you have to publish it ,choose Publish in the upper-right corner, and then choose create public link.
 
-![Image description](./Images/publish.png)
+![Image description](./Images/Publish.png)
 ![Image description](./Images/Create_link.png)
 ![Image description](./Images/link.png)
 
@@ -149,10 +149,10 @@ As part of the AWS Free Tier, you can get started with Amazon Sumerian for free.
 
 You are charged for the total size of the 3D assets you upload and store in Sumerian at the rate of $0.06 per GB per month.
 
-For more info check out [Amazon Sumerian Pricing](https://aws.amazon.com/sumerian/pricing/)
+For more info check out [Amazon Sumerian Pricing](https://aws.amazon.com/sumerian/pricing/).
 
 ## References
 
-The feature of amazon transcribing service was added using this [tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/)
+The feature of amazon transcribing service was added using this [tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
 
-The 3D model was purchased from [here](https://www.turbosquid.com/3d-models/arab-man-rigged-max/1037750)
+The 3D model was purchased from [here](https://www.turbosquid.com/3d-models/arab-man-rigged-max/1037750).
