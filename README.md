@@ -85,7 +85,7 @@ Go back to the sumerian editor. First in the entities pannel click on the charac
 
 It will open a new window. In the animation script replace the highlighted code with the ARN number that you copied in the previous step while creating the lamba function.
 
-# The Scen]ce
+# The Scene
 
 Once you’re done with setting up the CloudFormation stack, importing the bundle, creating a lambda function and setting up the Cognito ID. You will be presented with the following scene.
 
