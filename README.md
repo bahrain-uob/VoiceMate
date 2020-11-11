@@ -45,7 +45,7 @@ After you import the bundle then you need to add Cognito Id. You can create one 
 
 Click on Create Stack
 
-![Image description](./Images/Create_cognto.png)
+![Image description](./Images/Create_cognito.png)
 
 Copy the Cognito Id that you generated and paste it into the Sumerian scene.
 
