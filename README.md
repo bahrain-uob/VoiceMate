@@ -2,7 +2,7 @@
 
 ## What is it?
 
-VoiceMate is an application that converts voice into sign language and vice versa.
+VoiceMate is an application that converts voice into sign language using Aws services.
 
 The Voice to sign part was done using these aws services & technologies
 
@@ -10,51 +10,32 @@ The Voice to sign part was done using these aws services & technologies
 - Amazon Transcribe
 - Amazon Polly
 - Amazon Cognito
-- AWS CloudFormation
-- Amplify
-- Ionic
-- React
+- Aws CloudFormation
+- Aws Lambda
 
-## How to use VoiceMate?
+## This is what you will have by the end of this tutorial
 
-This scene can be viewed in the following way after you have created your own scene.
+![Image description](./Images/Screen%20Shot%202020-11-11%20at%208.49.03%20AM.png)
 
-![Image description](./Images/Welcome%20To%20Summerian%20Scene.png)
-
-Once the scene loads it will ask you to allow for microphone access.
-
-![Image description](./Images/Permission.png)
-
-Then you click on the start transcribing button.
-Then through your microphone speak any sentence it will display your sentence on the screen and then convert into sign language.
-
-![Image description](./Images/Screenshot%20(50).png)
-
-You can also view your transcription log by clicking on the Toggle transcription Button
-
-![Image description](./Images/Transcription%20Log.png)
-
-## Integration
-
-The best thing about amazon Sumerian is that these scenes can be easily integrated with a wide range of technologies in your web and mobile application.
-Follow these steps to Integrate Voice mate in your applications and customize it and build upon it.
-Log into you Aws account or if you don’t have one you can easily create it [here](https://aws.amazon.com/resources/create-account/)
-
-![Image description](./Images/aws%20login.png)
-
-Once you are in the console, go to services and search for Amazon Sumerian.
+First you need to log into you Aws account or if you don’t have one you can easily create it [here](https://aws.amazon.com/resources/create-account/). It is very simple and super fast to create an AWS account.
 
 ![Image description](./Images/console.png)
 
+Once you are in the AWS console, go to services and search for Amazon Sumerian.
+
+![Image description](./Images/aws_console.png)
+
+
 When the Sumerian editor loads click on create new scene.
 
-![Image description](./Images/editor.png)
+![Image description](./Images/Sumerian_Editor.png)
 
 Enter a name for your scene then hit enter then it will take you to the Sumerian Editor.
 
 ![Image description](./Images/sumerian%20editor.png)
 
-In the editor click on import asset and upload this [file](https://github.com/gray-guy/AWS_VoiceMate/blob/master/Voice_To_Sign/VoiceMate-bundle.zip)
+In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/Voice_To_Sign/VoiceMate-bundle.zip)
+
 
 ![Image description](./Images/bundle%20upload.png)
 
@@ -67,9 +48,40 @@ Copy the Cognito Id that you generated and paste it into the Sumerian scene.
 ![Image description](./Images/cognito%20id.png) 
  
 Add the Cognito id in your scene...
+
 ![Image description](./Images/entering%20cognito%20id.png)
 
-Once you’re done with setting up the CloudFormation stack, importing the bundle and setting up the Cognito ID. You will be presented with the following scene.
+After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/sumerian-text-process-function.zip)
+
+Go to the Aws [lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions)
+
+![Image description](./Images/Screen%20Shot%202020-11-11%20at%2010.22.18%20AM.png)
+
+Click on Create function 
+
+![Image description](./Images/Screen%20Shot%202020-11-11%20at%2010.25.03%20AM.png)
+
+Keep the default setting and give any name to your function.
+
+![Image description](./Images/Screen Shot 2020-11-11 at 2.54.44 PM.png)
+
+Then click on create function.
+
+In the Function code section, expand the Code entry type drop-down list, and then choose Upload a .ZIP file.
+
+![Image description](./Images/Screen Shot 2020-11-11 at 2.58.49 PM.pngg)
+
+After you have uploaded the zip file successfully, copy the ARN number.
+
+![Image description](./Images/Screen Shot 2020-11-11 at 3.02.42 PM.png)
+
+Go back to the sumerina editor. First in the entities pannel click on the character and then in the script pannel click on the edit scipt icon (pencil icon).
+
+![Image description](./Images/Screen Shot 2020-11-11 at 3.10.01 PM.png)
+
+It will open a new window. 
+
+Once you’re done with setting up the CloudFormation stack, importing the bundle, creating a lambda function and setting up the Cognito ID. You will be presented with the following scene.
 
 ![Image description](./Images/importing%20bundle.png)
 
@@ -84,7 +96,8 @@ The scripts on this component handle the audio transcription to text.
   
 ### Character Pack
 
-The 3d model in the scene has an animation component attached and has all the states linked to its respective animation clips. The model along with the animations were created in Blender, a popular 3D modelling software. Any other software can be used as well.
+The 3d model in the scene has an animation component attached and has all the states linked to its respective animation clips. The model was purchased and animations were created in Blender, a popular 3D modelling software. Any other software can be used as well.
+
 The 3d model also has a script component attached. The “AnimationScript” handles all the logic to play animations based on the transcribed text.
 
 ![Image description](./Images/importing%20bundle%202.png)
@@ -93,109 +106,7 @@ Once you are done modifying the scene then you have to publish it ,choose Publis
 
 ![Image description](./Images/publishing.png)
 
-The scene will be published for private view. It generates a JSON config file for you to embed in your Amplify app.
-![Image description](./Images/json.png)
- 
-Choose Download JSON configuration. This downloads the JSON config file named sumerian_exports_ sceneId.json. Remember where you save this file because later you are going to need it.
 
-Ok to you use this scene in an application you are going to use Aws Amplify. So, you need to set up the CLI first.
-
-```
-npm install -g @aws-amplify/cli
-```
- 
-Once the CLI is installed then you need to configure it
-
-```
-amplify configure
-```
- 
-It will ask you to provide information related to your aws account. Enter all the information and amplify will be installed on your computer.
-The amplify team has done a pretty good job in creating the documentation. Click [here](https://aws-amplify.github.io/docs/cli-toolchain/quickstart?sdk=js) to find out more.
-
-Once you have installed aws amplify on your computer we are ready to integrate this scene into your application.
-
-First you need to download & install NodeJS on your computer. You can download it from [here](https://nodejs.org/en/download/)
-
-We are going to use ionic and react to create our application.
-
-Install ionic with this command.
-
-```
-npm install -g @ionic/cli
-```
-When the installation finish creates a new ionic application.
-
-```
-ionic start MySummerianApp blank --type=react
-```
-It will take a few minutes to create your new project. When the project is created go inside the project folder and install amplify inside this project.
-
-```
-cd MySumerianApp
-```
-
-```
-npm install aws-amplify aws-amplify-react --save
-```
-Then initialize amplify in your project. 
-```
-amplify init
-```
-
-![Image description](./Images/cmd%201.png)
-
-After the initialization enter the following command.  
-
-```
-Amplify add xr
-```
-After configuration of the Sumerian in your app type the following command.
-
-```
-amplify push
-```
-After you are done with all the configuration Open your project with Visual studio code.
- 
-Replace home.tsx file with the following code.
-
-```
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
-import { SumerianScene } from 'aws-amplify-react';
-import Amplify from 'aws-amplify';
-import Aws_exports from '../aws-exports';
-import AWS from 'aws-sdk';
-
-
-new AWS.Polly();
-Amplify.configure(Aws_exports);
-
-const Home: React.FC = () => {
-  return (
-    <IonPage>
-       <IonContent>
-      <div style={ { height: '100vh' } }>
-    <SumerianScene sceneName='MyScene'/>
-  </div>
-  </IonContent>
-    </IonPage>
-  );
-};
-
-export default Home;
-
-```
-Then test your application with the following command.
-
- ```
- ionic serve
- ```
-
-And you will get this in your application.
-You can further modify your app and make changes as you like. This was a tutorial that showed how you can use voice mate in your mobile or web application.
 
 ## Pricing
 
@@ -207,11 +118,6 @@ You are charged for the total size of the 3D assets you upload and store in Sume
 
 ## References
 
-The tutorial to add the Sumerian scene into react application.
-https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/amplify-react-2/
+The feature of amazon transcribing service was added using this [tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/)
 
-The tutorial upon which we built our scene that explains how to use amazon transcribing service.
-https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/
-
-To solve any problem related to creating ionic application.
-https://ionicframework.com/docs
+The 3D model was purchased from [here]()
