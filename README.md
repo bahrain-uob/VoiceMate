@@ -140,9 +140,9 @@ The scene will take the audio input and then convert into the sign language.
 
 
 You can also make changes to the scene according to your own needs. Once you are done modifying the scene then you have to publish it ,choose Publish in the upper-right corner, and then choose create public link.
-
-![Image description](./Images/Publish.png)
 ![Image description](./Images/Create_link.png)
+![Image description](./Images/Publish.png)
+
 ![Image description](./Images/link.png)
 
 With the link that is generated you can view and interact with the scene on the web across any device.
