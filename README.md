@@ -53,7 +53,7 @@ Copy the Cognito Id that you generated and paste it into the Sumerian scene.
  
 Add the Cognito id in your scene...
 
-![Image description](./Images/Add_Cognito.png)
+![Image description](./Images/Add_cognito.png)
 
 After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/sumerian-text-process-function.zip)
 
