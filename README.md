@@ -10,8 +10,8 @@ The Voice to sign part was done using these aws services & technologies
 - Amazon Transcribe
 - Amazon Polly
 - Amazon Cognito
-- Aws CloudFormation
-- Aws Lambda
+- Amazon CloudFormation
+- Amazon Lambda
 
 ## This is what you will have by the end of this tutorial
 
@@ -36,12 +36,12 @@ Enter a name for your scene then hit enter then it will take you to the Sumerian
 
 ![Image description](./Images/Import_asset.png)
 
-In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/VoiceMate_v1.1_Bundle.zip)
+In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/VoiceMate_v1.1_Bundle.zip).
 
 
 ![Image description](./Images/Upload_bundle.png)
 
-After you import the bundle then you need to add Cognito Id. You can create one by clicking [here](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack)
+After you import the bundle then you need to add Cognito Id. You can create one by clicking [here](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack).
 
 Click on Create Stack
 
@@ -55,9 +55,9 @@ Add the Cognito id in your scene...
 
 ![Image description](./Images/Add_cognito.png)
 
-After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/sumerian-text-process-function.zip)
+After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/sumerian-text-process-function.zip).
 
-Go to the Aws [lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions)
+Go to the Aws [lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions).
 
 ![Image description](./Images/Lambda_console.png)
 
@@ -145,7 +145,7 @@ You can also make changes to the scene according to your own needs. Once you are
 
 ![Image description](./Images/link.png)
 
-With the link that is generated you can view and interact with the scene on the web across any device.
+With the link that is generated you can view and interact with the scene on the web across any supported browser/device.
 
 ## Pricing
 
