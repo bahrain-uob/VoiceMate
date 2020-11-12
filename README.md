@@ -133,13 +133,14 @@ For the demo purposes the scene only converts the following paragraph to sign la
 >At this time, there are no specific treatments for corona virus. However, there are many ongoing clinical trials evaluating potential treatments.
 
 
-You can test it out by reading the following paragraph.
+You can test it out by reading the paragraph.
 
 The scene will take the audio input and then convert into the sign language.
 
 
 
 You can also make changes to the scene according to your own needs. Once you are done modifying the scene then you have to publish it ,choose Publish in the upper-right corner, and then choose create public link.
+
 ![Image description](./Images/Create_link.png)
 ![Image description](./Images/Publish.png)
 
