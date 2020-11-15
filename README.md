@@ -108,7 +108,7 @@ There are two main entities in this scene:
 
 ### AudioTranscription
 
-The scripts on this component handle the audio transcription to text. It takes the audio input and display it on the screen, this feature was added from this [amazon summerian tutorial].(https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/) 
+The scripts on this component handle the audio transcription to text. It takes the audio input and display it on the screen, this feature was added from this [amazon summerian tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
   
 ### Character Pack
 
