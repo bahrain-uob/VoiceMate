@@ -45,6 +45,12 @@ After you import the bundle then you need to add Cognito Id. You can create one 
 
 Click on Create Stack
 
+This stack is an AWS CloudFormation template that will spin up the required resources to get you up and running quickly. The AWS CloudFormation template will do the following:
+
+-Create an Amazon Cognito identity pool with IAM (Identity and Access Management) policies for Amazon Lex, Amazon Polly, and Amazon Transcribe streaming transcription.
+
+-Output the Cognito identity pool ID
+
 ![Image description](./Images/Create_cognito.png)
 
 Copy the Cognito Id that you generated and paste it into the Sumerian scene.
