@@ -49,7 +49,7 @@ This stack is an AWS CloudFormation template that will spin up the required reso
 
 - Output the Cognito identity pool ID
 
-![Image description](./Images/Create_cognito.png)
+![Image description](./Images/Create_cognito.PNG)
 
 Copy the Cognito Id that you generated and paste it into the Sumerian scene.
 
