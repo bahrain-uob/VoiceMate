@@ -41,7 +41,7 @@ In the editor, click on **Import asset** and upload the [provided sumerian bundl
 
 After you import the bundle, you need to add a Cognito Id that grants the sumerian scene access to AWS Resources.
 
-To do that, first we will create an [AWS CloudFormation stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack)
+To do that, first we will create an [AWS CloudFormation stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack).
 
 This stack is an AWS CloudFormation template that will spin up the required resources to get you up and running quickly. The AWS CloudFormation template will do the following:
 
@@ -63,11 +63,7 @@ Now, we need to setup our Lambda function. The Lambda function will pre-process 
 
 Go to the **AWS Lambda** console.
 
-![Image description](./Images/Lambda_console.png)
-
 Click on **Create function**. 
-
-![Image description](./Images/Create_function.png)
 
 Keep the default settings and give a name to your function.
 
