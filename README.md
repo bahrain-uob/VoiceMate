@@ -36,7 +36,7 @@ Enter a name for your scene then hit enter then it will take you to the Sumerian
 
 ![Image description](./Images/Import_asset.png)
 
-In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/VoiceMate_v1.1_Bundle.zip).
+In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/src/VoiceMate_v1.1_Bundle.zip).
 
 
 ![Image description](./Images/Upload_bundle.png)
@@ -61,7 +61,7 @@ Add the Cognito id in your scene...
 
 ![Image description](./Images/Add_cognito.png)
 
-After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/sumerian-text-process-function.zip).
+After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/src/sumerian-text-process-function.zip).
 
 Go to the Aws [lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions).
 
