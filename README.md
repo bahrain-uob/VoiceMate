@@ -29,9 +29,7 @@ Once you are logged in, go to services and search for Amazon Sumerian.
 
 When the Sumerian console loads, click on **Create new scene**.
 
-![Image description](./Images/Create_name.png)
-
-Enter a name for your scene then hit enter. It will take you to the Sumerian Editor.
+Enter a name for your scene then click  **Create**. It will take you to the Sumerian Editor.
 
 ![Image description](./Images/Import_asset.png)
 
