@@ -2,9 +2,9 @@
 
 ## What is it?
 
-VoiceMate is an application that converts voice into sign language using Aws services.
+VoiceMate is an application that converts voice into sign language using AWS services.
 
-The Voice to sign part was done using these aws services & technologies
+The system was developed using these AWS services & technologies:
 
 - Amazon Sumerian
 - Amazon Transcribe
@@ -19,31 +19,29 @@ The Voice to sign part was done using these aws services & technologies
 
 ## How to create the scene ?
 
-First you need to log into you Aws account or if you don’t have one you can easily create it [here](https://aws.amazon.com/resources/create-account/). It is very simple and super fast to create an AWS account.
+First, you need to [log into you AWS account](https://aws.amazon.com/console/) or if you don’t have one you can easily [create a new AWS account](https://aws.amazon.com/resources/create-account/).
 
 ![Image description](./Images/Log_in.png)
 
-Once you are in the AWS console, go to services and search for Amazon Sumerian.
+Once you are logged in, go to services and search for Amazon Sumerian.
 
 ![Image description](./Images/Sumerina_Editor.png)
 
-
-When the Sumerian editor loads click on create new scene.
+When the Sumerian console loads, click on **Create new scene**.
 
 ![Image description](./Images/Create_name.png)
 
-Enter a name for your scene then hit enter then it will take you to the Sumerian Editor.
+Enter a name for your scene then hit enter. It will take you to the Sumerian Editor.
 
 ![Image description](./Images/Import_asset.png)
 
-In the editor click on import asset and upload this [file](https://github.com/bahrain-uob/VoiceMate/blob/master/src/VoiceMate_v1.1_Bundle.zip).
-
+In the editor, click on **Import asset** and upload the [provided sumerian bundle file](https://github.com/bahrain-uob/VoiceMate/blob/master/src/VoiceMate_v1.1_Bundle.zip).
 
 ![Image description](./Images/Upload_bundle.png)
 
-After you import the bundle then you need to add Cognito Id. You can create one by clicking [here](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack).
+After you import the bundle, you need to add a Cognito Id that grants the sumerian scene access to AWS Resources.
 
-Click on Create Stack
+To do that, first we will create an [AWS CloudFormation stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https:%2F%2Fs3.amazonaws.com%2Fsumerian-cfn-templates%2FTranscribeStreamingLexPollyExampleTemplate.yml&stackName=AmazonSumerianTrascribeStreamingStack)
 
 This stack is an AWS CloudFormation template that will spin up the required resources to get you up and running quickly. The AWS CloudFormation template will do the following:
 
@@ -61,35 +59,35 @@ Add the Cognito id in your scene...
 
 ![Image description](./Images/Add_cognito.png)
 
-After that download the lambda function file by clicking [here](https://github.com/bahrain-uob/VoiceMate/blob/master/src/sumerian-text-process-function.zip).
+Now, we need to setup our Lambda function. The Lambda function will pre-process the transcribed text. Download the [provided Lambda function](https://github.com/bahrain-uob/VoiceMate/blob/master/src/sumerian-text-process-function.zip).
 
-Go to the Aws [lambda console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions).
+Go to the **AWS Lambda** console.
 
 ![Image description](./Images/Lambda_console.png)
 
-Click on Create function 
+Click on **Create function**. 
 
 ![Image description](./Images/Create_function.png)
 
-Keep the default setting and give any name to your function.
+Keep the default settings and give a name to your function.
 
 ![Image description](./Images/Function_name.png)
 
-Then click on create function.
+Then click on **Create function**.
 
-In the Function code section, expand the Code entry type drop-down list, and then choose Upload a .ZIP file.
+In the function code section, expand the Code entry type drop-down list, and then choose **Upload a .zip** file.
 
 ![Image description](./Images/Upload_zip.png)
 
-After you have uploaded the zip file successfully, copy the ARN number.
+After you have uploaded the zip file successfully, copy the **ARN number**.
 
 ![Image description](./Images/Copy_Arn.png)
 
-Go back to the sumerian editor. First in the entities pannel click on the character and then in the script pannel click on the edit scipt icon (pencil icon).
+Go back to the Sumerian editor. First in the **Entities** panel, click on the entity named "Habib" and then in the **Script** panel, click on the edit scipt icon (pencil icon).
 
 ![Image description](./Images/Edit_code.png)
 
-It will open a new window. In the animation script replace the highlighted code with the ARN number that you copied in the previous step while creating the lamba function.
+It will open a new window. In the **AnimationScript** replace the highlighted code with the **ARN number** that you copied in the previous step while creating the Lambda function.
 
 ![Image description](./Images/Change_code.png)
 
@@ -108,15 +106,13 @@ There are two main entities in this scene:
 
 ### AudioTranscription
 
-The scripts on this component handle the audio transcription to text. It takes the audio input and display it on the screen, this feature was added from this [amazon summerian tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
+The scripts on this component handle the realtime audio transcription to text. This feature was added from the following Amazon Sumerian article: [Hands-Free Chatbot and Voice Transcription Using Amazon Sumerian](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
   
 ### Character Pack
 
-The 3d model in the scene has an animation component attached and has all the states linked to its respective animation clips. The model was purchased and animations were created in Blender, a popular 3D modelling software. Any other software can be used as well.
+The 3d model in the scene has an **Animation** component attached which has all the states linked to their respective animation clips. The model was purchased and animations were created in [Blender3D](https://www.blender.org/), a popular 3D modelling software. Any other software can be used as well.
 
-The 3d model also has a script component attached. The “AnimationScript” handles all the logic to play animations based on the transcribed text.
-
-
+The 3d model also has a **Script** component attached. The “AnimationScript” handles all the logic to play animations based on the transcribed text.
 
 
 # How to use it?
@@ -124,9 +120,9 @@ The 3d model also has a script component attached. The “AnimationScript” han
 Click on the play button to start the scene.
 ![Image description](./Images/Play.png)
 
-Then click on the start button.
+Then click on the **Start** button.
 
-For the demo purposes the scene only converts the following paragraph to sign lanaguage.
+For demo purposes, try the following paragraph on COVID-19:
 
 >Coronavirus disease is an infectious disease caused by a newly discovered coronavirus.
 >
@@ -144,15 +140,14 @@ You can test it out by reading the paragraph.
 The scene will take the audio input and then convert into the sign language.
 
 
-
-You can also make changes to the scene according to your own needs. Once you are done modifying the scene then you have to publish it ,choose Publish in the upper-right corner, and then choose create public link.
+You can also make changes to the scene according to your own needs. Once you are done modifying the scene, then you have to publish it, choose **Publish** in the upper-right corner, and then choose **Create public link**.
 
 ![Image description](./Images/Create_link.png)
 ![Image description](./Images/Publish.png)
 
 ![Image description](./Images/link.png)
 
-With the link that is generated you can view and interact with the scene on the web across any supported browser/device.
+With the link that is generated, you can view and interact with the scene on the web across any supported browser/device.
 
 ## Pricing
 
@@ -165,6 +160,6 @@ For more info check out [Amazon Sumerian Pricing](https://aws.amazon.com/sumeria
 
 ## References
 
-The feature of amazon transcribing service was added using this [tutorial](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
+The feature of Amazon Transcribing Service was added following this article on [Hands-Free Chatbot and Voice Transcription Using Amazon Sumerian](https://docs.sumerian.amazonaws.com/articles/hands-free-voice-transcription/).
 
 The 3D model was purchased from [here](https://www.turbosquid.com/3d-models/arab-man-rigged-max/1037750).
