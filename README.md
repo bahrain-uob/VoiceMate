@@ -23,11 +23,11 @@ First, you need to [log into you AWS account](https://aws.amazon.com/console/) o
 
 ![Image description](./Images/Log_in.png)
 
-Once you are logged in, go to services and search for Amazon Sumerian.
-
-![Image description](./Images/Sumerina_Editor.png)
+Once you are logged in, go to services and search for **Amazon Sumerian**.
 
 When the Sumerian console loads, click on **Create new scene**.
+
+![Image description](./Images/Create_Scene.PNG)
 
 Enter a name for your scene then click  **Create**. It will take you to the Sumerian Editor.
 
@@ -69,7 +69,7 @@ Keep the default settings and give a name to your function.
 
 Then click on **Create function**.
 
-In the function code section, expand the Code entry type drop-down list, and then choose **Upload a .zip** file.
+In the function code section, expand the **Actions** drop-down list, and then choose **Upload a .zip** file.
 
 ![Image description](./Images/Upload_zip.png)
 
@@ -118,16 +118,17 @@ Then click on the **Start** button.
 
 For demo purposes, try the following paragraph on COVID-19:
 
->Coronavirus disease is an infectious disease caused by a newly discovered coronavirus.
+>Corona virus is an infectious disease which has infected 84,882 people in Bahrain.
 >
->Most people infected with the corona virus will experience mild to moderate respiratory illness and recover without requiring special treatment.
+>People infected will experience respiratory illness.
 >
->The best way to prevent and slow down transmission is be well informed about the corona virus, the disease it causes and how it spreads.
+>How to prevent it?
 >
->Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.
+>The best way to protect yourself and others from infection is by washing your hands, WEARING a MASK and not touching your face.
 >
->At this time, there are no specific treatments for corona virus. However, there are many ongoing clinical trials evaluating potential treatments.
-
+>At this time, there is no specific VACCINE for corona virus.
+>
+>However, there are many ongoing clinical trials.
 
 You can test it out by reading the paragraph.
 
@@ -142,6 +143,16 @@ You can also make changes to the scene according to your own needs. Once you are
 ![Image description](./Images/link.png)
 
 With the link that is generated, you can view and interact with the scene on the web across any supported browser/device.
+
+## ASL Vocabulary
+
+VoiceMate currently supports the following:
+
+- Alphabets
+- Numbers upto 1,000,000
+- Over 150 Words
+
+Refer to this [vocabulary](./Vocabulary.md) for more details.
 
 ## Pricing
 
