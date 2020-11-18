@@ -122,7 +122,7 @@ For demo purposes, try the following paragraph on COVID-19:
 >
 >People infected will experience respiratory illness.
 >
->How to prevent it?
+>How can we prevent it?
 >
 >The best way to protect yourself and others from infection is by washing your hands, WEARING a MASK and not touching your face.
 >
