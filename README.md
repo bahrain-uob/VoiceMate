@@ -124,9 +124,9 @@ For demo purposes, try the following paragraph on COVID-19:
 >
 >How can we prevent it?
 >
->The best way to protect yourself and others from infection is by washing your hands, WEARING a MASK and not touching your face.
+>The best way to protect yourself and others from infection is by washing your hands, wearing a mask and not touching your face.
 >
->At this time, there is no specific VACCINE for corona virus.
+>At this time, there is no specific vaccine for corona virus.
 >
 >However, there are many ongoing clinical trials.
 
